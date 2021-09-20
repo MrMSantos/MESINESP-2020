@@ -1,8 +1,7 @@
+import pickle
 import numpy as np
 import pandas as pd
-import pickle
 from tqdm import tqdm
-from collections import Counter
 
 from sklearn.preprocessing import MultiLabelBinarizer
 
@@ -64,7 +63,7 @@ class CustomBERTModel(nn.Module):
 		return loss, logits
 
 #Load dataset into pandas dataframe
-train_df = pd.read_json('MESINESP_PREPROCESSED_TRAINING.json')
+train_df = pd.read_json('./MESINESP_PREPROCESSED_TRAINING.json')
 
 #Read the first entries
 print(train_df.head())
